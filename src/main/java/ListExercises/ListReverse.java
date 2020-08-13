@@ -15,7 +15,6 @@ public class ListReverse {
             prev = current;
             current = next;
         }
-
         return prev;
     }
 
@@ -25,14 +24,17 @@ public class ListReverse {
         ListNode head = l;
         ListNode copyHead = copy;
         while(head.next != null){
-            ListNode current = new ListNode(head.next.value);
-            current.next = null;
-            copy.next = current;
-            copy = current;
+            copy = getListNode(copy, head);
             head = head.next;
-
         }
-
         return copyHead;
+    }
+
+    private static ListNode getListNode(ListNode copy, ListNode head) {
+        ListNode current = new ListNode(head.next.value);
+        current.next = null;
+        copy.next = current;
+        copy = current;
+        return copy;
     }
 }
