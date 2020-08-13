@@ -3,10 +3,9 @@ import ListExercises.ListNode;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
-public class ListKElementsRemovalTest {
+public class ListKElementsRemovalTest extends ListExerciseTest{
 
     @Test
     public void removeKFromListTest(){
@@ -23,26 +22,4 @@ public class ListKElementsRemovalTest {
         assert(Arrays.equals(convertListToArray(result), new Integer[] { 1, 2, 4, 5}));
     }
 
-    public static ListNode createList(int[] array, int i){
-        ListNode<Integer> prev = null;
-        ListNode<Integer>  node= new ListNode(array[i]);
-        if(i < array.length-1){
-            i++;
-            prev = createList(array, i);
-        }
-        node.next = prev;
-
-        return node;
-    }
-
-    public static Integer[] convertListToArray(ListNode<Integer> l){
-        ArrayList<Integer> al = new ArrayList();
-        while(l != null){
-            al.add(Integer.valueOf(l.value));
-            l = l.next;
-        }
-
-        Integer[] arr = new Integer[al.size()];
-        return al.toArray(arr);
-    }
 }
