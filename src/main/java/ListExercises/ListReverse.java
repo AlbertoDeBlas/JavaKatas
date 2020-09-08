@@ -18,6 +18,29 @@ public class ListReverse {
         return prev;
     }
 
+    public static ListNode reverseNodes(ListNode<Integer> l, int k){
+
+        ListNode<Integer> prev = null;
+
+        ListNode<Integer> current = new ListNode(l.value);
+        current.next = l.next;
+        ListNode<Integer> next;
+        int i = 0;
+        while (current != null && i < k) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+            i++;
+        }
+
+        if(i<k){
+            return null;
+        }else{
+            return prev;
+        }
+    }
+
     public static ListNode copyList(ListNode<Integer> l){
         ListNode copy = new ListNode(l.value);
         copy.next = null;

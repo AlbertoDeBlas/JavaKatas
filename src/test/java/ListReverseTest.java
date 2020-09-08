@@ -30,6 +30,28 @@ public class ListReverseTest {
 
     }
 
+    @Test
+    public void reverseNodesTest(){
+
+        int[] myArray = new int[] {3, 1, 2, 3, 4, 5};
+
+        ListNode<Integer> head = ListExerciseTest.createList(myArray, 0);
+        ListNode<Integer> reversed = ListReverse.reverseNodes(head,3);
+
+        assert(Arrays.equals(ListExerciseTest.convertListToArray(reversed), new Integer[] { 2, 1, 3}));
+    }
+
+    @Test
+    public void reverseNodes_KSmallerThanListLengthTest(){
+
+        int[] myArray = new int[] {3, 1};
+
+        ListNode<Integer> head = ListExerciseTest.createList(myArray, 0);
+        ListNode<Integer> reversed = ListReverse.reverseNodes(head,3);
+
+        assert(Arrays.equals(ListExerciseTest.convertListToArray(reversed), new Integer[] { }));
+    }
+
     void printList(ListNode<Integer> l){
         System.out.println("-------list-----");
         while(l != null){
