@@ -14,6 +14,8 @@ public class ListExerciseTest {
             node.next = prev;
 
             return node;
+        }else if (array != null){
+            return null;
         }else{
             return (new ListNode(null));
         }
