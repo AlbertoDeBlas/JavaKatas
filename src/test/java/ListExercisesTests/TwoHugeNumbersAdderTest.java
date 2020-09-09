@@ -1,13 +1,15 @@
+package ListExercisesTests;
+
 import ListExercises.ListNode;
-import ListExercises.ListPalindromeDecider;
 import ListExercises.TwoHugeNumbersAdder;
+import ListExercisesTests.ListExerciseTest;
 import org.junit.Test;
 
 import java.util.Arrays;
 
 import static org.junit.Assert.assertTrue;
 
-public class TwoHugeNumbersAdderTest extends ListExerciseTest{
+public class TwoHugeNumbersAdderTest extends ListExerciseTest {
     @Test
     public void twoHugeNumberAdder_oneCarryTest(){
         int[] firstSummand = new int[] {9876, 5432, 1999};

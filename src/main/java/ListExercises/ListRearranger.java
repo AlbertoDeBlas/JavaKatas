@@ -8,13 +8,11 @@ public class ListRearranger extends ListOperations{
         ListNode<Integer> tempList = new ListNode(0);
         ListNode<Integer> tempListHead = tempList;
 
-
         for(int i = 0; i < length-n;i++){
             tempList.next = l;
             tempList = tempList.next;
             l = l.next;
         }
-
         tempList.next = null;
 
         while(l != null){
@@ -22,11 +20,7 @@ public class ListRearranger extends ListOperations{
             rearrangedList = rearrangedList.next;
             l = l.next;
         }
-
         rearrangedList.next = tempListHead.next;
-
         return rearrangedListHead.next;
-
-
     }
 }

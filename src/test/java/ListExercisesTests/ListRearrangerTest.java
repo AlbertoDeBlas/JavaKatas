@@ -1,5 +1,8 @@
+package ListExercisesTests;
+
 import ListExercises.ListNode;
 import ListExercises.ListRearranger;
+import ListExercisesTests.ListExerciseTest;
 import org.junit.Test;
 
 import java.util.Arrays;

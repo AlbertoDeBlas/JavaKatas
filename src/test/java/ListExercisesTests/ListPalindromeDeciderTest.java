@@ -1,14 +1,14 @@
-import ListExercises.ListKElementsRemoval;
+package ListExercisesTests;
+
 import ListExercises.ListNode;
 import ListExercises.ListPalindromeDecider;
+import ListExercisesTests.ListExerciseTest;
 import org.junit.Test;
-
-import java.util.Arrays;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class ListPalindromeDeciderTest extends ListExerciseTest{
+public class ListPalindromeDeciderTest extends ListExerciseTest {
     @Test
     public void isListPalindrome_isAPalindromeOddLengthTest(){
         int[] myArray = new int[] {0, 1, 0};

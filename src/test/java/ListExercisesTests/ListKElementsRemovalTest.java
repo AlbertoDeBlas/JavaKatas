@@ -1,11 +1,14 @@
+package ListExercisesTests;
+
 import ListExercises.ListKElementsRemoval;
 import ListExercises.ListNode;
 
+import ListExercisesTests.ListExerciseTest;
 import org.junit.Test;
 
 import java.util.Arrays;
 
-public class ListKElementsRemovalTest extends ListExerciseTest{
+public class ListKElementsRemovalTest extends ListExerciseTest {
 
     @Test
     public void removeKFromListTest(){

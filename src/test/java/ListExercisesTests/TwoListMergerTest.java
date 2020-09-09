@@ -1,11 +1,13 @@
+package ListExercisesTests;
+
 import ListExercises.ListNode;
-import ListExercises.TwoHugeNumbersAdder;
 import ListExercises.TwoListMerger;
+import ListExercisesTests.ListExerciseTest;
 import org.junit.Test;
 
 import java.util.Arrays;
 
-public class TwoListMergerTest extends ListExerciseTest{
+public class TwoListMergerTest extends ListExerciseTest {
     @Test
     public void twoListMerger_withoutCommonValuesTest(){
         int[] firstList= new int[] {1, 2, 3};
