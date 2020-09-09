@@ -6,7 +6,7 @@ public class ListOperations {
 
     public static ListNode reverseList(ListNode<Integer> l){
 
-        return reverseNodes(l, getListLength(l)+1);
+        return reverseNodes(l, getListLength(l));
     }
 
     public static ListNode reverseNodes(ListNode<Integer> l, int k){
@@ -32,14 +32,24 @@ public class ListOperations {
         }
     }
 
-    public static int getListLength(ListNode<Integer> counter) {
+   /* public static int getListLength(ListNode<Integer> counter) {
         int listLength = 0;
         while(counter.next != null){
             listLength++;
             counter = counter.next;
         }
         return listLength;
+    }*/
+
+    public static int getListLength(ListNode<Integer> l){
+        int listLength = 0;
+        while(l != null){
+            listLength++;
+            l = l.next;
+        }
+        return listLength;
     }
+
 
     public static ListNode copyList(ListNode<Integer> l){
         ListNode copy = new ListNode(l.value);

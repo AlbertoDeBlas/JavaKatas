@@ -31,4 +31,12 @@ public class ListExerciseTest {
         Integer[] arr = new Integer[al.size()];
         return al.toArray(arr);
     }
+
+    public static void printList(ListNode<Integer> l){
+        System.out.println("-------list-----");
+        while(l != null){
+            System.out.println(l.value);
+            l = l.next;
+        }
+    }
 }

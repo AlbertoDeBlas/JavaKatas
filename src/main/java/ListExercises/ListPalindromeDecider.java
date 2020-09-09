@@ -6,7 +6,7 @@ public class ListPalindromeDecider extends ListOperations {
         ListNode<Integer> counter = l;
         if (l != null && l.next != null) {
             int listLength = getListLength(counter);
-            int center = (listLength+1) / 2;
+            int center = (listLength) / 2;
 
             ListNode<Integer> ReverseL = ListOperations.reverseList(ListOperations.copyList(l));
             isListPalindrome = compareBeginEndList(l, ReverseL, center);
