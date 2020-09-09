@@ -2,20 +2,11 @@ package ListExercises;
 
 import ListExercises.ListNode;
 
-public class ListReverse {
+public class ListOperations {
 
     public static ListNode reverseList(ListNode<Integer> l){
 
-        ListNode prev = null;
-        ListNode current = l;
-        ListNode next;
-        while (current != null) {
-            next = current.next;
-            current.next = prev;
-            prev = current;
-            current = next;
-        }
-        return prev;
+        return reverseNodes(l, getListLength(l)+1);
     }
 
     public static ListNode reverseNodes(ListNode<Integer> l, int k){
@@ -39,6 +30,15 @@ public class ListReverse {
         }else{
             return prev;
         }
+    }
+
+    public static int getListLength(ListNode<Integer> counter) {
+        int listLength = 0;
+        while(counter.next != null){
+            listLength++;
+            counter = counter.next;
+        }
+        return listLength;
     }
 
     public static ListNode copyList(ListNode<Integer> l){

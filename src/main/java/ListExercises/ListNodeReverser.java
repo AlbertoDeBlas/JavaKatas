@@ -1,6 +1,6 @@
 package ListExercises;
 
-public class ListNodeReverser extends ListReverse{
+public class ListNodeReverser extends ListOperations {
 
     public static ListNode<Integer> reverseNodesInKGroups(ListNode<Integer> l, int k) {
         ListNode<Integer> ReversedList = new ListNode(0);

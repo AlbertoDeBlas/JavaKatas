@@ -1,22 +1,16 @@
 package ListExercises;
 
-public class ListPalindromeDecider {
+public class ListPalindromeDecider extends ListOperations {
     public static boolean isListPalindrome(ListNode<Integer> l) {
         boolean isListPalindrome = true;
         ListNode<Integer> counter = l;
         if (l != null && l.next != null) {
-            int listLength = 0;
-            while(counter.next != null){
-                listLength++;
-                counter = counter.next;
-            }
+            int listLength = getListLength(counter);
             int center = (listLength+1) / 2;
 
-            ListNode<Integer> ReverseL = ListReverse.reverseList(ListReverse.copyList(l));
-
+            ListNode<Integer> ReverseL = ListOperations.reverseList(ListOperations.copyList(l));
             isListPalindrome = compareBeginEndList(l, ReverseL, center);
         }
-
 
         return isListPalindrome;
     }
@@ -29,7 +23,6 @@ public class ListPalindromeDecider {
             }
             l = l.next;
             ReverseL = ReverseL.next;
-
         }
         return true;
     }

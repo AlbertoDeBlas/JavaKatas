@@ -1,10 +1,10 @@
 import ListExercises.ListNode;
-import ListExercises.ListReverse;
+import ListExercises.ListOperations;
 import org.junit.Test;
 
 import java.util.Arrays;
 
-public class ListReverseTest {
+public class ListOperationsTest {
 
     @Test
     public void reverseListTest(){
@@ -12,7 +12,7 @@ public class ListReverseTest {
         int[] myArray = new int[] {3, 1, 2, 3, 4, 5};
 
         ListNode<Integer> head = ListExerciseTest.createList(myArray, 0);
-        ListNode<Integer> reversed = ListReverse.reverseList(head);
+        ListNode<Integer> reversed = ListOperations.reverseList(head);
 
         assert(Arrays.equals(ListExerciseTest.convertListToArray(reversed), new Integer[] { 5, 4, 3, 2, 1, 3}));
     }
@@ -23,7 +23,7 @@ public class ListReverseTest {
         int[] myArray = new int[] {3, 1, 2, 3, 4, 5};
 
         ListNode<Integer> head = ListExerciseTest.createList(myArray, 0);
-        ListNode<Integer> copied = ListReverse.copyList(head);
+        ListNode<Integer> copied = ListOperations.copyList(head);
 
         assert(Arrays.equals(ListExerciseTest.convertListToArray(head),
                             ListExerciseTest.convertListToArray(copied)));
@@ -36,7 +36,7 @@ public class ListReverseTest {
         int[] myArray = new int[] {3, 1, 2, 3, 4, 5};
 
         ListNode<Integer> head = ListExerciseTest.createList(myArray, 0);
-        ListNode<Integer> reversed = ListReverse.reverseNodes(head,3);
+        ListNode<Integer> reversed = ListOperations.reverseNodes(head,3);
 
         assert(Arrays.equals(ListExerciseTest.convertListToArray(reversed), new Integer[] { 2, 1, 3}));
     }
@@ -47,7 +47,7 @@ public class ListReverseTest {
         int[] myArray = new int[] {3, 1};
 
         ListNode<Integer> head = ListExerciseTest.createList(myArray, 0);
-        ListNode<Integer> reversed = ListReverse.reverseNodes(head,3);
+        ListNode<Integer> reversed = ListOperations.reverseNodes(head,3);
 
         assert(Arrays.equals(ListExerciseTest.convertListToArray(reversed), new Integer[] { }));
     }

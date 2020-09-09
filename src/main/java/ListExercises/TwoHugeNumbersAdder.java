@@ -6,8 +6,8 @@ public class TwoHugeNumbersAdder {
 
     public static ListNode<Integer> addTwoHugeNumbers(ListNode<Integer> a, ListNode<Integer> b) {
         //reverse lists
-        ListNode<Integer> reversedA = ListReverse.reverseList(a);
-        ListNode<Integer> reversedB = ListReverse.reverseList(b);
+        ListNode<Integer> reversedA = ListOperations.reverseList(a);
+        ListNode<Integer> reversedB = ListOperations.reverseList(b);
         ListNode<Integer> sumResult = new ListNode(0);
         ListNode<Integer> headResult = sumResult;
         Sum sum = Sum.createSum(0,0);
@@ -24,7 +24,7 @@ public class TwoHugeNumbersAdder {
         }
         addExtraNodeIfCarry(sumResult, sum.getCarry());
 
-        return ListReverse.reverseList(headResult.next);
+        return ListOperations.reverseList(headResult.next);
     }
 
     private static Sum sumNodes(Sum sum, int summandA, int summandB) {
