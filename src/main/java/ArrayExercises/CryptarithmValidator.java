@@ -6,15 +6,9 @@ import java.util.HashMap;
 public class CryptarithmValidator {
     public static boolean isCryptSolution(String[] crypt, char[][] solution) {
         try{
-
-            //HashSet<String, Integer> solutionSet = new HashSet<>(Arrays.asList(solution));
-
             HashMap<Character, Integer> solutionMap = new HashMap<Character, Integer>();
 
-            for (int i=0; i<solution.length; i++){
-                solutionMap.put(solution[i][0], Integer.valueOf(solution[i][1])-'0');
-            }
-
+            fillSolutionMap(solution, solutionMap);
 
             long word1 = transformWord(crypt[0],solutionMap);
             long word2 = transformWord(crypt[1],solutionMap);
@@ -23,6 +17,12 @@ public class CryptarithmValidator {
             return isValidEquation(word1,word2,word3);
         }catch(LeadingZeroException e){
             return false;
+        }
+    }
+
+    private static void fillSolutionMap(char[][] solution, HashMap<Character, Integer> solutionMap) {
+        for (int i = 0; i< solution.length; i++){
+            solutionMap.put(solution[i][0], Integer.valueOf(solution[i][1])-'0');
         }
     }
 
